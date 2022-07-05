@@ -13,7 +13,7 @@ Concept: Storing contract sources on ipfs with a valid proof based on the contra
 `ipfs-cluster-service daemon --bootstrap  <multicast address>`
 
 #### ls all pinned files in cluster 
-`` 
+`ipfs-cluster-ctl pin ls` 
 
 
 #### tunnel to ifps machine through ssh tunnel 
