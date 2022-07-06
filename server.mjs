@@ -1,4 +1,3 @@
-import Fastify from 'fastify';
 import fs from 'fs';
 import {ipfsUpload, ipfsDL} from "./ipfs-cluster-api.mjs";
 
