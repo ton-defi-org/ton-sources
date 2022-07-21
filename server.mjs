@@ -8,7 +8,7 @@ const app = express()
 const port = 3000
 
 app.get('/', async (req, res) => {
-  res.send('Hello World!')
+  res.send('ton-sources!')
 })
 
 
@@ -27,13 +27,9 @@ app.get('/download-ipfs/:cid', async (req, res) => {
 
 
 app.get('/ipfs-ls', async (req, res) => {
-    exec("./")
-    let path = await ipfsDL(req.params.cid, "dog-mayc.png");
-     console.log(`path: ${path}`);
-    
-    fs.createReadStream(path).pipe(res);
+    const out = exec("./ipfs-cluster-ctl pin ls ");
+    res.send(out);  
 })
-
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
